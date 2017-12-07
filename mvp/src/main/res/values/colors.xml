@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#f5f5f5</color>
+    <color name="colorPrimaryLight">#f5f5f5</color>
+    <color name="colorAccent">#fcd953</color>
+    <color name="toolbar_color">#000000</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#333333</color>
+    <color name="red">#ff9900</color>
+    <color name="blue">#508cee</color>
+    <color name="brown">#4c3a2c</color>
+    <color name="yellow">#fcd953</color>
+    <color name="gray_666">#666666</color>
+    <color name="gray_999">#999999</color>
+    <color name="gray_bbb">#bbbbbb</color>
+    <color name="gray_ccc">#cccccc</color>
+    <color name="gray_eee">#eeeeee</color>
+    <color name="bg_white">#f5f5f5</color>
+    <color name="bg_gray">#0D000000</color>
+    <color name="divider">#1A000000</color>
+    <color name="orange">#FF9900</color>
+    <color name="black_15">#151515</color>
+
+    <color name="gray">#cccccc</color>
+    <color name="yellow_80">#ccfcd953</color>
+    <color name="yellow_70">#96fcd953</color>
+    <color name="yellow_50">#80fcd953</color>
+    <color name="yellow_10">#1Afcd953</color>
+    <color name="orange_10">#1AFF9900</color>
+    <color name="white_50">#80ffffff</color>
+    <color name="white_30">#4dffffff</color>
+    <color name="transparent_10">#1Affffff</color>
+    <color name="white_90">#ccffffff</color>
+    <color name="transparent_30">#4c000000</color>
+    <color name="transparent_50">#80000000</color>
+    <color name="transparent_70">#96000000</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="yellow_90">#E4FCD953</color>
+    <color name="red_dot">#d74a4a</color>
+    <color name="yellow_20">#ffc942</color>
+
+</resources>

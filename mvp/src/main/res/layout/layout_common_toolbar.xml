@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_bar"
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_header_bg"
+    android:layout_height="?attr/actionBarSize">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/toolbar_left_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/top_back"
+            android:clickable="false"
+            android:gravity="center"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/toolbar_left_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="6dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:maxWidth="100dp"
+            android:text="返回"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/left_tv_text_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/toolbar_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:maxEms="10"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_tv_text_size"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/toolbar_right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/toolbar_right_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:visibility="invisible" />
+        <!--右边按钮-->
+        <TextView
+            android:id="@+id/toolbar_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/right_tv_text_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
