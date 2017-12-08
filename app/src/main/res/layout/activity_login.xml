@@ -6,12 +6,12 @@
     android:orientation="vertical"
     tools:context="com.zjj.framedemo.modules.LoginActivity">
 
-    <EditText
+    <com.zjj.framedemo.view.ClearEditText
         android:id="@+id/edit_username"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
-    <EditText
+    <com.zjj.framedemo.view.ClearEditText
         android:id="@+id/edit_pwd"
         android:layout_width="match_parent"
         android:layout_height="50dp" />

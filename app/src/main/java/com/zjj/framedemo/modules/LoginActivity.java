@@ -4,13 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.rambler.core.MvpActivity;
 import com.zjj.framedemo.R;
 import com.zjj.framedemo.dagger.AppModule;
 import com.zjj.framedemo.model.LoginResult;
+import com.zjj.framedemo.view.ClearEditText;
 
 import java.util.HashMap;
 
@@ -25,9 +25,9 @@ public class LoginActivity extends MvpActivity<LoginView,LoginPresenter> impleme
     @Inject
     LoginPresenter mLoginPresenter;
     @Bind(R.id.edit_username)
-    EditText editUserName;
+    ClearEditText editUserName;
     @Bind(R.id.edit_pwd)
-    EditText editPwd;
+    ClearEditText editPwd;
     @Bind(R.id.btn_login)
     Button btnLogin;
 
