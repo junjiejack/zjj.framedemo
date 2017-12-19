@@ -1,15 +1,27 @@
 package com.zjj.framedemo;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.rambler.base.BaseActivity;
 import com.zjj.framedemo.modules.LoginActivity;
+import com.zjj.framedemo.modules.baopay.OrderActivity;
+import com.zjj.framedemo.modules.pay.HuaTaiPayActivity;
+import com.zjj.framedemo.modules.taiping.TaipingActivity;
+import com.zjj.framedemo.utils.DisplayUtil;
+import com.zjj.framedemo.view.FlowLayout;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+
 
 public class MainActivity extends BaseActivity {
 
@@ -21,12 +33,71 @@ public class MainActivity extends BaseActivity {
         performRequestPermissions(new String[] {
                 Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE
         }, 123, null);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                AppInterfaceTest test = new AppInterfaceTest();
+                try {
+                    test.testPolicyJsonBean();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
     }
 
-    @OnClick(R.id.btn_login)
+    @OnClick({R.id.btn_login,R.id.btn_hua_tai,R.id.btn_bao_pay,R.id.btn_tai_ping_pay,R.id.btn_flow_layout})
     public void onClick(View view) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        Intent intent;
+        switch (view.getId()) {
+            case R.id.btn_login :
+                intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_hua_tai:
+                intent = new Intent(this, HuaTaiPayActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_bao_pay:
+                intent = new Intent(this, OrderActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_tai_ping_pay:
+                intent = new Intent(this, TaipingActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_flow_layout:
+                showCheckDialog();
+                break;
+        }
+
+    }
+
+    private String[] mDatas = new String[]{"整车保","普货保","员工保","商铺档口火灾保","大宗货物保","冷链保"};
+
+    private void showCheckDialog() {
+        final Dialog dialog = new Dialog(this, R.style.MyDialog);
+        final View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_sift_insurance, null);
+        dialog.setContentView(dialogView);
+        ViewGroup.LayoutParams layoutParams = dialogView.getLayoutParams();
+        layoutParams.width = getResources().getDisplayMetrics().widthPixels;
+        dialogView.setLayoutParams(layoutParams);
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
+        dialog.show();//显示对话框
+        FlowLayout flowLayout = dialogView.findViewById(R.id.flow_layout);
+        // 循环添加TextView到容器
+        for (int i = 0; i < mDatas.length; i++) {
+            final TextView view = new TextView(this);
+            view.setText(mDatas[i]);
+            view.setPadding(DisplayUtil.dip2px(this,10), DisplayUtil.dip2px(this,5), DisplayUtil.dip2px(this,10), DisplayUtil.dip2px(this,5));
+            view.setGravity(Gravity.CENTER);
+            view.setTextSize(18);
+            view.setTextColor(getResources().getColor(R.color.btn_sift_selector));
+            view.setBackgroundResource(R.drawable.bg_btn_circle_sift_selector);
+            flowLayout.addView(view);
+        }
+
     }
 
     @Override

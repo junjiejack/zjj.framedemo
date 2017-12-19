@@ -1,8 +1,8 @@
-package com.zjj.framedemo.modules;
+package com.zjj.framedemo.modules.pay;
 
 import com.rambler.common.MvpBasePresenter;
-import com.zjj.framedemo.model.LoginResult;
-import com.zjj.framedemo.retrofit.JubaoApi;
+import com.zjj.framedemo.model.PayInfo;
+import com.zjj.framedemo.retrofit.Api;
 import com.zjj.framedemo.retrofit.RxBaseSubscriber;
 
 import java.util.HashMap;
@@ -18,21 +18,21 @@ import rx.schedulers.Schedulers;
  * @author zhoujunjie on 2017/12/7.
  */
 
-public class LoginPresenter extends MvpBasePresenter<LoginView> {
+public class HuaTaiPayPresenter extends MvpBasePresenter<HuaTaiPayView> {
 
-    private JubaoApi api;
+    private Api api;
     private Subscriber loginSubscriber;
 
     @Inject
-    public LoginPresenter(JubaoApi api) {
+    public HuaTaiPayPresenter(Api api) {
         this.api = api;
     }
 
-    public void getLoginInfo(final HashMap<String,String> map) {
+    public void getPayInfo(final HashMap<String,Integer> map) {
         if (isViewAttached()) {
             getView().showLoading();
         }
-        loginSubscriber = new RxBaseSubscriber<LoginResult>() {
+        loginSubscriber = new RxBaseSubscriber<PayInfo>() {
 
             @Override
             public void _onError(Throwable throwable) {
@@ -42,13 +42,13 @@ public class LoginPresenter extends MvpBasePresenter<LoginView> {
             }
 
             @Override
-            public void _onNext(LoginResult result) {
+            public void _onNext(PayInfo result) {
                 if (isViewAttached()) {
                     getView().showSuccess(result);
                 }
             }
         };
-        api.getAccessToken(map).subscribeOn(Schedulers.io())
+        api.getPayInfo(map).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).subscribe(loginSubscriber);
     }
 

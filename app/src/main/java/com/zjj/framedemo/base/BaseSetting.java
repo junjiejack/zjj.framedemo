@@ -14,6 +14,9 @@ public class BaseSetting {
     public static String baseShareUrl = BaseSetting.BASE_SHARE_URL;
     public static String baseUrl = BaseSetting.BASE_DEBUG_URL;
 
+    /** 测试华泰支付 */
+    public static final String HUA_TAI_URL = "http://pay.lisea.cn";
+
     /**
      * 测试 产品 分享 环境的url
      */

@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.zjj.framedemo.MainActivity">
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="点击跳转" />
+        android:text="登录" />
+
+    <Button
+        android:id="@+id/btn_hua_tai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="华泰支付" />
+
+    <Button
+        android:id="@+id/btn_bao_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="宝付支付" />
+
+    <Button
+        android:id="@+id/btn_tai_ping_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="太平支付" />
+
+    <Button
+        android:id="@+id/btn_flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="流式布局" />
+
 
 </LinearLayout>

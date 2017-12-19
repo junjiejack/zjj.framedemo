@@ -1,6 +1,6 @@
 package com.zjj.framedemo.retrofit;
 
-import com.zjj.framedemo.model.LoginResult;
+import com.zjj.framedemo.model.PayInfo;
 
 import java.util.HashMap;
 
@@ -15,6 +15,7 @@ import rx.Observable;
 
 public interface Api {
 
-    @POST("/v1/cmn/user/login")
-    Observable<LoginResult> getAccessToken(@Body HashMap<String,String> map);
+    @POST("/pay/init")
+    Observable<PayInfo> getPayInfo(@Body HashMap<String,Integer> map);
+
 }
