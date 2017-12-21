@@ -14,9 +14,13 @@ import com.rambler.base.BaseActivity;
 import com.zjj.framedemo.modules.LoginActivity;
 import com.zjj.framedemo.modules.baopay.OrderActivity;
 import com.zjj.framedemo.modules.pay.HuaTaiPayActivity;
+import com.zjj.framedemo.modules.premium.PremiumActivity;
 import com.zjj.framedemo.modules.taiping.TaipingActivity;
 import com.zjj.framedemo.utils.DisplayUtil;
 import com.zjj.framedemo.view.FlowLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -47,7 +51,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn_login,R.id.btn_hua_tai,R.id.btn_bao_pay,R.id.btn_tai_ping_pay,R.id.btn_flow_layout})
+    @OnClick({R.id.btn_login,R.id.btn_hua_tai,R.id.btn_bao_pay,R.id.btn_tai_ping_pay,R.id.btn_flow_layout,R.id.btn_list})
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -70,6 +74,10 @@ public class MainActivity extends BaseActivity {
             case R.id.btn_flow_layout:
                 showCheckDialog();
                 break;
+            case R.id.btn_list:
+                intent = new Intent(this, PremiumActivity.class);
+                startActivity(intent);
+                break;
         }
 
     }
@@ -86,14 +94,24 @@ public class MainActivity extends BaseActivity {
         dialog.getWindow().setGravity(Gravity.BOTTOM);
         dialog.show();//显示对话框
         FlowLayout flowLayout = dialogView.findViewById(R.id.flow_layout);
+
+        List<Boolean> list = new ArrayList<>();
         // 循环添加TextView到容器
         for (int i = 0; i < mDatas.length; i++) {
+            list.add(false);
             final TextView view = new TextView(this);
             view.setText(mDatas[i]);
             view.setPadding(DisplayUtil.dip2px(this,10), DisplayUtil.dip2px(this,5), DisplayUtil.dip2px(this,10), DisplayUtil.dip2px(this,5));
             view.setGravity(Gravity.CENTER);
             view.setTextSize(18);
-            view.setTextColor(getResources().getColor(R.color.btn_sift_selector));
+            view.setClickable(true);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+            view.setTextColor(getResources().getColorStateList(R.color.btn_sift_selector));
             view.setBackgroundResource(R.drawable.bg_btn_circle_sift_selector);
             flowLayout.addView(view);
         }

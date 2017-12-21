@@ -1,11 +1,24 @@
 <resources>
 
+    <style name="AppTheme" parent="@style/BaseAppTheme">
+    </style>
+
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- toolbar的主题-->
+        <item name="toolbarStyle">@style/ClubToolbar</item>
+    </style>
+
+    <style name="ClubToolbar" parent="Widget.AppCompat.Toolbar">
+        <!-- 设置该属性解决空白部分-->
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -40,8 +53,8 @@
     </style>
 
     <declare-styleable name="FlowLayout">
-        <attr name="width_space" format="dimension"/>
-        <attr name="height_space" format="dimension"/>
+        <attr name="width_space" format="dimension" />
+        <attr name="height_space" format="dimension" />
     </declare-styleable>
 
 </resources>

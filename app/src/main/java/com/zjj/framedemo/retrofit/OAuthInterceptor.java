@@ -25,6 +25,8 @@ public class OAuthInterceptor implements Interceptor {
     Request.Builder requestBuilder = originalRequest.newBuilder()
         //Basic Authentication,也可用于token验证,OAuth验证
         .header("Charset", "UTF-8").header("Accept-Encoding", "gzip,deflate");
+    /**--------------------仅供测试使用--------------------------*/
+    SharedPreferencesUtil.getSingleton(mContext).save("token","5135|XxZ+hPZfEwxm6bw/ncHy+FMSMbmagHG63wo2jxIWeEpQZfxy0Tpc0NHWPA5o1BkOxgY2K4pUh6ZataxRjUse7g==");
     if (!TextUtils.isEmpty(
         SharedPreferencesUtil.getSingleton(mContext).getString("token", ""))) {
       String basic = "Bearer " + SharedPreferencesUtil.getSingleton(mContext)

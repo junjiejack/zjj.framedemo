@@ -56,4 +56,6 @@ dependencies {
     compile project(':mvp')
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile project(':swipetoload')
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 }

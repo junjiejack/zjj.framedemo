@@ -3,4 +3,8 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="app_tip">提示</string>
     <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="tv_premium_car">整车保</string>
+    <string name="tv_premium_personal">员工保</string>
+    <string name="tv_premium_shop">商铺档口火灾保</string>
+    <string name="price_value_unit">%.2f元</string>
 </resources>
