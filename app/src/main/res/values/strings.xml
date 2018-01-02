@@ -7,4 +7,18 @@
     <string name="tv_premium_personal">员工保</string>
     <string name="tv_premium_shop">商铺档口火灾保</string>
     <string name="price_value_unit">%.2f元</string>
+
+    <!--投保人-->
+    <string name="tv_insure_name">投保人</string>
+    <string name="tv_insured_name">被保险人</string>
+    <string name="tv_cargo_name">货物名称</string>
+    <string name="tv_package_number">数量包装</string>
+    <string name="tv_head_car_number">头车牌号</string>
+    <string name="tv_trailer_car_number">挂车牌号</string>
+    <string name="tv_freight_number">运单号</string>
+    <string name="tv_insure_money">保险金额</string>
+    <string name="tv_insure_rate">保险费率</string>
+    <string name="tv_insure_lowest">最低保费：</string>
+    <string name="tv_start_site">始发地</string>
+    <string name="tv_end_site">目的地</string>
 </resources>

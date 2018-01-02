@@ -54,8 +54,8 @@ public class TaipingActivity extends MvpActivity<TaipingView,TaipingPresenter> i
     @OnClick(R.id.btn_tai_ping)
     public void onClick(View view) {
         HashMap<String,String> map = new HashMap<>();
-        map.put("mobile","13605527713");
-        map.put("password","asd123456");
+        map.put("mobile","18062007361");
+        map.put("password","11111a");
         presenter.getLoginInfo(map);
     }
 
@@ -100,7 +100,10 @@ public class TaipingActivity extends MvpActivity<TaipingView,TaipingPresenter> i
         }
         webSettings.setDomStorageEnabled(true);
         webSettings.setAppCacheEnabled(true);
+
+        System.out.println("url123:"+result.getData().getPay_url());
         webView.loadUrl(result.getData().getPay_url());
+//        webView.loadUrl("http://test.jubao56.com/spb/pay-online.html?705");
     }
 
 

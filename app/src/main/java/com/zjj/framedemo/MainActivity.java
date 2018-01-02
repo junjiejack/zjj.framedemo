@@ -13,6 +13,8 @@ import android.widget.TextView;
 import com.rambler.base.BaseActivity;
 import com.zjj.framedemo.modules.LoginActivity;
 import com.zjj.framedemo.modules.baopay.OrderActivity;
+import com.zjj.framedemo.modules.custom.CustomTagActivity;
+import com.zjj.framedemo.modules.insure.InsureActivity;
 import com.zjj.framedemo.modules.pay.HuaTaiPayActivity;
 import com.zjj.framedemo.modules.premium.PremiumActivity;
 import com.zjj.framedemo.modules.taiping.TaipingActivity;
@@ -51,7 +53,8 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn_login,R.id.btn_hua_tai,R.id.btn_bao_pay,R.id.btn_tai_ping_pay,R.id.btn_flow_layout,R.id.btn_list})
+    @OnClick({R.id.btn_login,R.id.btn_hua_tai,R.id.btn_bao_pay,R.id.btn_tai_ping_pay,R.id.btn_flow_layout,
+            R.id.btn_list,R.id.btn_tou_bao,R.id.btn_tag})
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -76,6 +79,14 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_list:
                 intent = new Intent(this, PremiumActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_tou_bao:
+                intent = new Intent(this, InsureActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_tag:
+                intent = new Intent(this,CustomTagActivity.class);
                 startActivity(intent);
                 break;
         }

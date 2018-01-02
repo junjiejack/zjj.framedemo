@@ -1,5 +1,7 @@
 package com.zjj.framedemo.retrofit;
 
+import com.zjj.framedemo.model.CityModel;
+import com.zjj.framedemo.model.ProvinceModel;
 import com.zjj.framedemo.model.LoginResult;
 import com.zjj.framedemo.model.MyPremiumModel;
 import com.zjj.framedemo.model.TaipingResult;
@@ -10,6 +12,7 @@ import java.util.Map;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
 import rx.Observable;
 
@@ -27,4 +30,10 @@ public interface JubaoApi {
 
     @GET("/v1/cmn/biz/statisticsnew/list")
     Observable<MyPremiumModel> getPremiumList(@QueryMap Map<String,String> map);
+
+    @GET("/v1/cmn/province/list")
+    Observable<ProvinceModel> getProvinceList();
+
+    @GET("/v1/cmn/city/list")
+    Observable<CityModel> getCityList(@Query("province") String province);
 }
