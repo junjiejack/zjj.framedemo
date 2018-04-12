@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#069acd">
+
+        <!--设置布局的高度是toolbar缩放到最高的高度-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:title="协调者布局">
+
+                <ImageView
+                    android:id="@+id/backdrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_collapseMode="parallax" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/sv_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_qr_code" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/content"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab_floatactionbutton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:clickable="true"-->
+        <!--android:src="@drawable/ic_close"-->
+        <!--app:layout_anchor="@id/appbarlayout"-->
+        <!--app:layout_anchorGravity="bottom|right|end" />-->
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

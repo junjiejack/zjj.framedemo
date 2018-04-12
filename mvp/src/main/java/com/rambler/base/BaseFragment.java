@@ -15,9 +15,13 @@ import com.rambler.util.AnalyticsUtil;
 
 import org.greenrobot.eventbus.EventBus;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 public abstract class BaseFragment extends Fragment implements MvpView {
   public MaterialDialog mDialog;
   protected View mBackBtn;
+  protected Unbinder unbinder;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,7 @@ public abstract class BaseFragment extends Fragment implements MvpView {
               + "fragment manually, then you have to override onCreateView();");
     } else {
       View v = inflater.inflate(layoutRes, container, false);
+      unbinder = ButterKnife.bind(this, v);
       return v;
     }
   }
@@ -79,6 +84,7 @@ public abstract class BaseFragment extends Fragment implements MvpView {
       }
       mDialog = null;
     }
+
   }
 
   /**
@@ -110,5 +116,11 @@ public abstract class BaseFragment extends Fragment implements MvpView {
     super.onPause();
     //数据统计
     AnalyticsUtil.onPageEnd(getClass().getSimpleName());
+  }
+
+  @Override
+  public void onDestroyView() {
+    super.onDestroyView();
+    unbinder.unbind();
   }
 }
