@@ -1,59 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.zjj.framedemo.MainActivity">
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_login"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/rb_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="登录" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_hua_tai"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="华泰支付" />
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/SubFragment"
+            android:drawableTop="@drawable/bg_tab_home"
+            android:text="首页"
+            android:textColor="@color/color_tab_text" />
 
-    <Button
-        android:id="@+id/btn_bao_pay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="宝付支付" />
+        <RadioButton
+            android:id="@+id/rb_custom"
+            style="@style/SubFragment"
+            android:drawableTop="@drawable/bg_tab_task"
+            android:text="控件"
+            android:textColor="@color/color_tab_text" />
 
-    <Button
-        android:id="@+id/btn_tai_ping_pay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="太平支付" />
+        <RadioButton
+            android:id="@+id/rb_third"
+            style="@style/SubFragment"
+            android:drawableTop="@drawable/bg_tab_profit"
+            android:text="三方"
+            android:textColor="@color/color_tab_text" />
 
-    <Button
-        android:id="@+id/btn_flow_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="流式布局" />
+        <RadioButton
+            android:id="@+id/rb_other"
+            style="@style/SubFragment"
+            android:drawableTop="@drawable/bg_tab_mine"
+            android:text="计划"
+            android:textColor="@color/color_tab_text" />
 
-    <Button
-        android:id="@+id/btn_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="列表" />
-
-    <Button
-        android:id="@+id/btn_tou_bao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="投保" />
-
-
-    <Button
-        android:id="@+id/btn_tag"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义控件" />
-
+    </RadioGroup>
 
 </LinearLayout>

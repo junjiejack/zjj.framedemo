@@ -19,7 +19,7 @@ import java.util.HashMap;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -31,9 +31,9 @@ public class HuaTaiPayActivity extends MvpActivity<HuaTaiPayView, HuaTaiPayPrese
 
     @Inject
     HuaTaiPayPresenter presenter;
-    @Bind(R.id.btn_hua_tai)
+    @BindView(R.id.btn_hua_tai)
     Button btnHuaTaiPay;
-    @Bind(R.id.web_view)
+    @BindView(R.id.web_view)
     WebView webView;
 
 
@@ -65,7 +65,6 @@ public class HuaTaiPayActivity extends MvpActivity<HuaTaiPayView, HuaTaiPayPrese
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
     }
 
     @Override

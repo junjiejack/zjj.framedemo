@@ -6,7 +6,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'  //添加这一行
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -35,12 +35,12 @@ ext {
     libraries = [
             appcompat7Version   : "26.+",
             supportv4Version    : "19.1.0",
-            butterknifeVersion  : "7.0.1",
+            butterknifeVersion  : "8.8.1",
             glideVersion        : "3.7.0",
             recyclerviewVersion : "23.0.0",
             rxjavaVersion       : "1.1.6",
             rxandroidVersion    : "1.2.1",
-            daggerVersion       : "2.2",
+            daggerVersion       : "2.15",
             eventbusVersion     : "3.0.0",
             retrofit2Version    : "2.0.1",
             annotationVersion   : "1.2",

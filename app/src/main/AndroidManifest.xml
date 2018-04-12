@@ -38,7 +38,7 @@
             android:name=".modules.insure.InsureActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".modules.custom.CustomTagActivity" />
-        <activity android:name=".modules.fastpay.FastPayActivity"></activity>
+        <activity android:name=".modules.entrance.EntranceActivity" />
     </application>
 
 </manifest>

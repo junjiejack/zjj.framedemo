@@ -16,7 +16,7 @@ import java.util.HashMap;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -24,11 +24,11 @@ public class LoginActivity extends MvpActivity<LoginView,LoginPresenter> impleme
 
     @Inject
     LoginPresenter mLoginPresenter;
-    @Bind(R.id.edit_username)
+    @BindView(R.id.edit_username)
     ClearEditText editUserName;
-    @Bind(R.id.edit_pwd)
+    @BindView(R.id.edit_pwd)
     ClearEditText editPwd;
-    @Bind(R.id.btn_login)
+    @BindView(R.id.btn_login)
     Button btnLogin;
 
     @NonNull
@@ -61,7 +61,6 @@ public class LoginActivity extends MvpActivity<LoginView,LoginPresenter> impleme
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
     }
 
 

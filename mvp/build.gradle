@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.jakewharton.butterknife'
+//apply plugin: 'com.neenbedankt.android-apt'
 
 def cfg = rootProject.ext.version // 配置
 def libs = rootProject.ext.libraries // 库
@@ -35,6 +36,7 @@ dependencies {
     })
     compile "com.android.support:appcompat-v7:${libs.appcompat7Version}"
     compile "com.jakewharton:butterknife:${libs.butterknifeVersion}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${libs.butterknifeVersion}"
     compile 'com.afollestad.material-dialogs:core:0.8.5.9'
     testCompile 'junit:junit:4.12'
     compile "io.reactivex:rxandroid:${libs.rxandroidVersion}"
@@ -46,7 +48,7 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile "com.google.dagger:dagger:${libs.daggerVersion}"
-    apt "com.google.dagger:dagger-compiler:${libs.daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${libs.daggerVersion}"
     compile "javax.annotation:javax.annotation-api:${libs.annotationVersion}"
     compile 'com.umeng.analytics:analytics:latest.integration'
     compile 'com.squareup.wire:wire-runtime:2.2.0'

@@ -26,7 +26,7 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
@@ -47,19 +47,19 @@ public class PremiumActivity extends MvpLceActivity<SwipeToLoadLayout,MyPremiumM
 
     String mUserId;
 
-    @Bind(R.id.toolbar_left_btn)
+    @BindView(R.id.toolbar_left_btn)
     Button toolbarLeftBtn;
-    @Bind(R.id.toolbar_left_tv)
+    @BindView(R.id.toolbar_left_tv)
     TextView toolbarLeftTv;
-    @Bind(R.id.toolbar_title_tv)
+    @BindView(R.id.toolbar_title_tv)
     TextView toolbarTitleTv;
-    @Bind(R.id.toolbar_right_btn)
+    @BindView(R.id.toolbar_right_btn)
     Button toolbarRightBtn;
-    @Bind(R.id.toolbar_right_tv)
+    @BindView(R.id.toolbar_right_tv)
     TextView toolbarRightTv;
-    @Bind(R.id.swipe_target)
+    @BindView(R.id.swipe_target)
     RecyclerView mRecyclerView;
-    @Bind(R.id.contentView)
+    @BindView(R.id.contentView)
     SwipeToLoadLayout swipeToLoadLayout;
 
     private List<MyPremiumModel.RowsBean> list = new ArrayList<>();
@@ -161,7 +161,6 @@ public class PremiumActivity extends MvpLceActivity<SwipeToLoadLayout,MyPremiumM
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
     }
 
 

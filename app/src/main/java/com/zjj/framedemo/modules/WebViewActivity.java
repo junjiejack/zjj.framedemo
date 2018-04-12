@@ -11,7 +11,7 @@ import com.zjj.framedemo.R;
 import com.zjj.framedemo.model.PayInfo;
 import com.zjj.framedemo.model.SceneInfo;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 
 public class WebViewActivity extends BaseActivity {
 
-    @Bind(R.id.web_view)
+    @BindView(R.id.web_view)
     WebView webView;
     private PayInfo payInfo;
 
@@ -81,6 +81,5 @@ public class WebViewActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
     }
 }

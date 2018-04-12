@@ -19,7 +19,7 @@ import java.util.HashMap;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -27,9 +27,9 @@ public class TaipingActivity extends MvpActivity<TaipingView,TaipingPresenter> i
 
     @Inject
     TaipingPresenter presenter;
-    @Bind(R.id.web_view)
+    @BindView(R.id.web_view)
     WebView webView;
-    @Bind(R.id.btn_tai_ping)
+    @BindView(R.id.btn_tai_ping)
     Button btnTaiping;
 
     @NonNull
@@ -62,7 +62,6 @@ public class TaipingActivity extends MvpActivity<TaipingView,TaipingPresenter> i
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
     }
 
 
