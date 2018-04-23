@@ -18,5 +18,10 @@
         android:layout_height="wrap_content"
         android:text="@string/cl_toolbar_scroll_hide" />
 
+    <Button
+        android:id="@+id/btn_system_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/system_share_normal" />
 
 </LinearLayout>

@@ -17,6 +17,9 @@ public class BaseSetting {
     /** 测试华泰支付 */
     public static final String HUA_TAI_URL = "http://pay.lisea.cn";
 
+    /**github*/
+    public static final String GIT_HUB_URL = "https://api.github.com";
+
     /**
      * 测试 产品 分享 环境的url
      */

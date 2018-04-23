@@ -62,4 +62,5 @@ dependencies {
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     testCompile 'junit:junit:4.12'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3@aar'//安卓权限第三方依赖
 }

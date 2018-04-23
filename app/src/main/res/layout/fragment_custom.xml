@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_wechat_nine"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="自定义控件" />
+        android:text="@string/wechat_nine" />
 
 </LinearLayout>

@@ -41,6 +41,9 @@
         <activity android:name=".modules.entrance.EntranceActivity" />
         <activity android:name=".modules.coordinatorlayout.CLCollapsingActivity"/>
         <activity android:name=".modules.coordinatorlayout.ToolBarHideActivity"/>
+        <activity android:name=".modules.third.MaterialEditActivity"/>
+        <activity android:name=".modules.share.SystemShareActivity"/>
+        <activity android:name=".modules.wechat.WechatNineActivity"/>
     </application>
 
 </manifest>

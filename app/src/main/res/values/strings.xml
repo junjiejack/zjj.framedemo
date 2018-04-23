@@ -34,4 +34,11 @@
         想结婚的就去结婚，想单身的就维持单身，反正到最后你们都要后悔。想结婚的就去结婚，想单身的就维持单身，反正到最后你们都要后悔。
 
     </string>
+    <string name="third_material_edit_text">material_Edit_Text(关于edittext的控件)</string>
+    <string name="system_share_normal">系统多图分享图片以及文字</string>
+    <string name="system_share_weixin">分享到朋友圈</string>
+    <string name="share_content">分享测试内容</string>
+    <string name="share_error">分享失败</string>
+    <string name="share_no_wechat">没有发现微信</string>
+    <string name="wechat_nine">朋友圈九宫格</string>
 </resources>

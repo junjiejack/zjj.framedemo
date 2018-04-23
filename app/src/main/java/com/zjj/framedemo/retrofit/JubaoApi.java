@@ -1,9 +1,9 @@
 package com.zjj.framedemo.retrofit;
 
 import com.zjj.framedemo.model.CityModel;
-import com.zjj.framedemo.model.ProvinceModel;
 import com.zjj.framedemo.model.LoginResult;
 import com.zjj.framedemo.model.MyPremiumModel;
+import com.zjj.framedemo.model.ProvinceModel;
 import com.zjj.framedemo.model.TaipingResult;
 
 import java.util.HashMap;
@@ -36,4 +36,5 @@ public interface JubaoApi {
 
     @GET("/v1/cmn/city/list")
     Observable<CityModel> getCityList(@Query("province") String province);
+
 }

@@ -8,6 +8,7 @@ import com.rambler.base.BaseFragment;
 import com.zjj.framedemo.R;
 import com.zjj.framedemo.modules.coordinatorlayout.CLCollapsingActivity;
 import com.zjj.framedemo.modules.coordinatorlayout.ToolBarHideActivity;
+import com.zjj.framedemo.modules.share.SystemShareActivity;
 
 import butterknife.OnClick;
 
@@ -28,7 +29,7 @@ public class OtherFragment extends BaseFragment {
 
     }
 
-    @OnClick({R.id.btn_cl_collapsing,R.id.btn_cl_toolbar})
+    @OnClick({R.id.btn_cl_collapsing,R.id.btn_cl_toolbar,R.id.btn_system_share})
     public void onClick(View view) {
         Intent intent = new Intent();
         switch (view.getId()) {
@@ -37,6 +38,9 @@ public class OtherFragment extends BaseFragment {
                 break;
             case R.id.btn_cl_toolbar:
                 intent.setClass(getActivity(), ToolBarHideActivity.class);
+                break;
+            case R.id.btn_system_share:
+                intent.setClass(getActivity(), SystemShareActivity.class);
                 break;
         }
         startActivity(intent);

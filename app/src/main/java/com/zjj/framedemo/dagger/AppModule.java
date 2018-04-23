@@ -62,7 +62,7 @@ public class AppModule {
                 .build();
         /**3. 创建retrofit */
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BaseSetting.HUA_TAI_URL)
+                .baseUrl(BaseSetting.GIT_HUB_URL)
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())         // 添加Gson解析
                 .addCallAdapterFactory(RetryCallAdapterFactory.create())    // 添加重试机制
